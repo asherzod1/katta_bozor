@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containerr{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 1440px) and (min-width: 1280px){
+    .containerr{
+        max-width: 94%;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 1279px) and (min-width: 560px){
+    .containerr{
+        max-width: 90%;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 559px) and (min-width: 280px){
+    .containerr{
+        max-width: 92%;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.ant-switch {
+    -webkit-appearance: button;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+    --bg-color: #fff;
+    --headings-color: #000000;
+    --desc-color: #000000;
+}
+
+.container-background{
+    min-height: 100vh !important;
+}
+body[data-theme="dark-theme"] {
+    --bg-color: #222;
+    --headings-color: #fff;
+    --desc-color: #fff;
+}
+
+body[data-theme="light-theme"] {
+    --bg-color: #fff;
+    --headings-color: #111;
+    --desc-color: #111;
+}
+
+.container-background{
+    background: var(--bg-color);
+}
+.theme-login{
+    background: var(--bg-color);
+}
+
+h2, h3, h5, h6, h1, p {
+    color: var(--headings-color);
 }
